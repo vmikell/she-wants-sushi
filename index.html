@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./sushi-icon.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <title>She Wants Sushi!</title>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9vASft1uGU4VEfvZZ0bgeb-rKds8dtLI&callback=initMap&libraries=places&v=weekly"
+    async></script>
+
+</head>
+<style>
+  .name {
+    display: block;
+    margin: auto;
+    margin-bottom: 5px;
+    text-align: center;
+    width: fit-content;
+    border: 4px solid black;
+    border-radius: 15px;
+    box-shadow: 1em 1em 1em;
+    
+  }
+
+  #map {
+    height: 55vh;
+    width: 100vw;
+    border: 4px solid black;
+    border-radius: 15px;
+    box-shadow: 1em 1em 1em;
+    z-index: 99999;
+  }
+
+  .container {
+    display: block;
+    margin: auto;
+    width: 100%;
+  }
+
+  #panel {}
+
+  .panel {
+    height: 100%;
+    width: null;
+    background-color: white;
+    position: fixed;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: all .2s ease-out;
+  }
+
+  .open {
+    width: 325px;
+    display: block;
+    margin: auto;
+    margin-top: 5px;;
+    border: 4px solid black;
+    border-radius: 15px;
+    box-shadow: 1em 1em 1em;
+  }
+
+  /* Styling for place details */
+  .hero {
+    width: 100%;
+    height: auto;
+    max-height: 166px;
+    display: block;
+  }
+
+  #place,
+  p {
+    font-family: 'open sans', arial, sans-serif;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .details {
+    color: darkslategrey;
+  }
+
+  a {
+    text-decoration: none;
+    color: cadetblue;
+  }
+</style>
+
+<body>
+  
+ 
+  <div class="container">
+    <h1 class="name"> She Wants Sushi!</h1>
+    <div class="map-container d-flex justify-content-center">
+      <div id="map"></div>
+    </div>
+    <div id="panel"></div>
+  </div>
+
+
+
+
+  <script src="apps.js"></script>
+</body>
+
+</html>
